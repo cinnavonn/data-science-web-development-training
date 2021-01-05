@@ -5,15 +5,15 @@ from dash.dependencies import Input, Output
 import plotly.express as px
 import pandas as pd
 import numpy as np
-import urllib3.request
-with urllib3.request.urlopen('https://github.com/cinnavonn/training11/blob/main/gapminder_clean.csv') as response:
-   html = response.read()
+import requests
+
+requests.get('https://github.com/cinnavonn/training12/blob/main/gapminder_clean.csv')
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
-df = pd.read_csv('https://github.com/cinnavonn/training11/blob/main/gapminder_clean.csv', index_col=[0])
+df = pd.read_csv('https://github.com/cinnavonn/training12/blob/main/gapminder_clean.csv', index_col=[0])
 print(df.replace(r'^\s*$', np.nan, regex=True))
 df.fillna(0, inplace=True)
 
