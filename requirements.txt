@@ -6,3 +6,4 @@ dash-table==4.11.1
 numpy==1.19.4
 pandas==1.2.0
 plotly==4.14.1
+requests==2.25.1
