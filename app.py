@@ -10,10 +10,8 @@ external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
-url = 'https://raw.githubusercontent.com/cinnavonn/training20/main/gapminder_clean.csv?token=ASHBL7WVKDPOXCRR25A37SK76S6OS'
-
-df = pd.read_csv(url, sep=",", index_col=[0])
-df.head()
+filepath = 'gapminder_clean.csv'
+df = pd.read_csv(filepath, index_col=[0])
 
 print(df.replace(r'^\s*$', np.nan, regex=True))
 df.fillna(0, inplace=True)
