@@ -7,13 +7,13 @@ import pandas as pd
 import numpy as np
 import requests
 
-requests.get('https://github.com/cinnavonn/training12/blob/main/gapminder_clean.csv')
+requests.get('https://github.com/cinnavonn/training13/blob/main/gapminder_clean.csv')
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
-df = pd.read_csv('https://github.com/cinnavonn/training12/blob/main/gapminder_clean.csv', index_col=[0])
+df = pd.read_csv('https://github.com/cinnavonn/training13/blob/main/gapminder_clean.csv', index_col=[0])
 print(df.replace(r'^\s*$', np.nan, regex=True))
 df.fillna(0, inplace=True)
 
