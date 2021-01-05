@@ -1,1 +1,1 @@
-web: python miniproject.py
+web: python app.py
