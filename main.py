@@ -10,6 +10,7 @@ import os
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+server = app.server
 
 filepath = 'gapminder_clean.csv'
 df = pd.read_csv(filepath, index_col=[0])
