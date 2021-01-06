@@ -5,6 +5,7 @@ from dash.dependencies import Input, Output
 import plotly.express as px
 import pandas as pd
 import numpy as np
+import os
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
@@ -103,4 +104,5 @@ def update_graph(xaxis_column_name, yaxis_column_name,
     return fig
 
 if __name__ == '__app__':
-        app.run_server(debug=True)
+    port = int(os.environ.get('PORT', 5000))
+    app.run_server(host='0.0.0.0', port=port)
