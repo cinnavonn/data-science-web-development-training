@@ -27,11 +27,11 @@ available_indicators = df1['Indicator Name'].unique()
 
 app.layout = html.Div([
     html.Div([
-    html.H1(
+    html.H2(
         children='Explore the gap minder!!'),
 
         html.Div([
-        html.H3('X axis'),
+        html.H3('X-axis'),
             dcc.Dropdown(
                 id='xaxis-column',
                 options=[{'label': i, 'value': i} for i in available_indicators],
@@ -47,7 +47,7 @@ app.layout = html.Div([
         style={'width': '38%', 'display': 'inline-block'}),
 
         html.Div([
-        html.H3('Y axis'),
+        html.H3('Y-axis'),
             dcc.Dropdown(
                 id='yaxis-column',
                 options=[{'label': i, 'value': i} for i in available_indicators],
