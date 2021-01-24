@@ -31,7 +31,7 @@ app.layout = html.Div([
         children='Explore the gap minder!!'),
 
         html.Div([
-        html.H3('X-axis'),
+        html.H4('x-axis'),
             dcc.Dropdown(
                 id='xaxis-column',
                 options=[{'label': i, 'value': i} for i in available_indicators],
@@ -47,7 +47,7 @@ app.layout = html.Div([
         style={'width': '38%', 'display': 'inline-block'}),
 
         html.Div([
-        html.H3('Y-axis'),
+        html.H4('y-axis'),
             dcc.Dropdown(
                 id='yaxis-column',
                 options=[{'label': i, 'value': i} for i in available_indicators],
