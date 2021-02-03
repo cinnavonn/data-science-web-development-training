@@ -21,7 +21,7 @@ df.fillna(0, inplace=True)
 df1 = (df.set_index(["Year", "Country Name", "continent", "pop"])
        .stack().reset_index(name='Value').rename(columns={'level_4':'Indicator Name'}))
 
-df1.loc[df1['Value'] == 0,'Value'] = np.nan
+df1.loc[df1['Value'] == " ",'Value'] = np.nan
 
 available_indicators = df1['Indicator Name'].unique()
 
